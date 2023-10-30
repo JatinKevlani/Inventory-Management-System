@@ -1,4 +1,5 @@
 <?php
+    $message = "";
     if($_POST){
         include('database/connection.php');
         $username = $_POST['username'];
@@ -10,9 +11,9 @@
         }
         $query = "INSERT INTO `new_users` VALUES ('$username', '$email', '$password', current_timestamp(), current_timestamp())";
         if($conn->query($query) == TRUE){
-            echo "User created";
+            $message = "Registered successfully!\nYour account will be created once admin approves you.";
         } else {
-            echo "Errorv : " . $conn->error;
+            echo "Error : " . $conn->error;
         }
     }
 ?>
