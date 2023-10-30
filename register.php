@@ -1,3 +1,21 @@
+<?php
+    if($_POST){
+        include('database/connection.php');
+        $username = $_POST['username'];
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+        $database_name = 'inventory';
+        if (!mysqli_select_db($conn, $database_name)) {
+            die("Database selection failed: " . mysqli_error($conn));
+        }
+        $query = "INSERT INTO `new_users` VALUES ('$username', '$email', '$password', current_timestamp(), current_timestamp())";
+        if($conn->query($query) == TRUE){
+            echo "User created";
+        } else {
+            echo "Errorv : " . $conn->error;
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,10 +35,10 @@
 <body>
     <div class="container">
         <h1 class="title-h1">Create <br> Account</h1>
-        <form action="#" method="get" accept-charset="utf-8">
+        <form action="register.php" method="post">
             <div class="input-box">
                 <i class="fas fa-user"></i>
-                <input class="name" type="text" name="name" placeholder=" Enter your username" />
+                <input class="name" type="text" name="username" placeholder=" Enter your username" />
                 <i class="fas fa-envelope"></i>
                 <input class="email" type="email" name="email" placeholder="Enter your email" />
                 <i class="fas fa-lock"></i>
