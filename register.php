@@ -12,6 +12,7 @@
         $query = "INSERT INTO `new_users` VALUES ('$username', '$email', '$password', current_timestamp(), current_timestamp())";
         if($conn->query($query) == TRUE){
             $message = "Registered successfully!\nYour account will be created once admin approves you.";
+            header('Location: index.php');
         } else {
             echo "Error : " . $conn->error;
         }
