@@ -18,9 +18,17 @@
             $user = $result->fetch_all()[0];
             $_SESSION['user'] = $user;
             header('Location: index.php');
-        } 
-        else {
+        } else {
+            $query = "SELECT * FROM new_users WHERE user_username='$username' AND user_password='$password'";
+            $result = $conn->query($query);
+            if (!$result) {
+                die("Query failed: " . mysqli_error($conn));
+            }
+            if ($result->num_rows > 0){
+                $error_message = "User already registered! Please wait for admin approval.";
+            } else {
                 $error_message = "Invalid username or password!";
+            }
         }
         $conn->close();
     }
