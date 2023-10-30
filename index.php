@@ -24,13 +24,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav" id="navigation-bar">
                     <li class="nav-item" id="navigation-item">
-                        <a id="navigation-link" class="nav-link text-*" href="Home.html" target="_blank" rel="noopener noreferrer">Home</a>
+                        <a id="navigation-link" class="nav-link text-*" href="#" rel="noopener noreferrer">Home</a>
                     </li>
                     <li class="nav-item" id="navigation-item">
-                        <a id="navigation-link" class="nav-link text-*" href="About Us" target="_blank" rel="noopener noreferrer">About Us</a>
+                        <a id="navigation-link" class="nav-link text-*" href="#" target="_blank" rel="noopener noreferrer">About Us</a>
                     </li>
                     <li class="nav-item" id="navigation-item">
-                        <a id="navigation-link" class="nav-link text-*" href="Contact Us" target="_blank" rel="noopener noreferrer">Contact Us</a>
+                        <a id="navigation-link" class="nav-link text-*" href="#" target="_blank" rel="noopener noreferrer">Contact Us</a>
                     </li>
                 </ul>
                 </div>
