@@ -1,2 +1,0 @@
-SQL command to copy content from new_users table to usersn table :-
-INSERT INTO `user` (`user_username`, `user_email`, `user_password`, `user_created_at`, `user_updated_at`) SELECT * FROM `new_users` WHERE `user_username` = "kavan";
