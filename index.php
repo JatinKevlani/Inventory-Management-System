@@ -33,13 +33,17 @@
                         <a id="navigation-link" class="nav-link text-*" href="Contact Us" target="_blank" rel="noopener noreferrer">Contact Us</a>
                     </li>
                 </ul>
-                
-                <?= isset($user[1]) ? "<ul class='navbar-nav ms-auto' id='navigation-bar' style='margin-right: 15px;'>
+                </div>
+                <?= isset($user[1]) ? "
+                <ul class='navbar-nav ms-auto' id='navigation-bar' style='margin-right: 15px;'>
                     <li class='nav-item' id='navigation-item'>
                         User : $user[1]
                     </li>
-                </ul>
-                <br><a href='logout.php'>Logout</a>": "<ul class='navbar-nav ms-auto' id='navigation-bar' style='margin-right: 15px;'>
+                    <li class='nav-item' id='navigation-item'>
+                        <a id='navigation-link' class='nav-link text-*' href='logout.php' rel='noopener noreferrer'>logout</a>
+                    </li>
+                </ul>" : "
+                <ul class='navbar-nav ms-auto' id='navigation-bar' style='margin-right: 15px;'>
                     <li class='nav-item' id='navigation-item'>
                         <a id='navigation-link' class='nav-link text-*' href='register.php' rel='noopener noreferrer'>Signup</a>
                     </li>
