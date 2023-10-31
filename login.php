@@ -25,7 +25,7 @@
                 die("Query failed: " . mysqli_error($conn));
             }
             if ($result->num_rows > 0){
-                $error_message = "User already registered! Please wait for admin approval.";
+                $error_message = "User already registered! <br>Please wait for admin approval.";
             } else {
                 $error_message = "Invalid username or password!";
             }
@@ -61,7 +61,7 @@
             </div>
             <?php if(!empty($error_message)) { ?>
                 <div class="errorMessage">
-                    <p><strong>Error :</strong> <?= $error_message ?></p>
+                    <h3><?= $error_message ?></h1>
                 </div>
             <?php } ?>
             <h3 class="title-h3">Login</h3>
