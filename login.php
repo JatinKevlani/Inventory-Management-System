@@ -44,7 +44,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
     </style>
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="style-login.css">
+    <link rel="stylesheet" href="css/style-login.css">
 </head>
 <body>
     <div class="container">
