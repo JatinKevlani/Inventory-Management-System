@@ -14,6 +14,9 @@
     <title>Document</title>
 </head>
 <body>
-    <?= isset($user[1]) ? "User : $user[1]<a href='logout.php'>logout</" : "<a href='register.php'>Signup</a><a href='login.php'>Login</a>" ?>
+    <?php if(isset($user[1])){ ?>
+        <p>User : <?= $user[1]?></p>
+        <a href="logout.php">Logout</a>
+    <?php } ?>
 </body>
 </html>
