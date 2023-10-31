@@ -17,7 +17,7 @@
         if ($result->num_rows > 0) {
             $user = $result->fetch_all()[0];
             $_SESSION['user'] = $user;
-            header('Location: index.php');
+            header('Location: dashboard.php');
         } else {
             $query = "SELECT * FROM new_users WHERE user_username='$username' AND user_password='$password'";
             $result = $conn->query($query);
