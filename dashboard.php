@@ -22,6 +22,8 @@
             <li>Created at : <?= $user[4]?></li>
             <li>Updated at : <?= $user[5]?></li>
         </ul>
+    <?php } else { ?>
+        <h1>Please <a href="login.php">Login</a> First</h1>
     <?php } ?>
 </body>
 </html>
