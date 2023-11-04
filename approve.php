@@ -1,10 +1,7 @@
 <?php
     $newusername = $_POST['approveusername'];
+    var_dump($newusername);
     include('database/connection.php');
-    $database_name = 'inventory';
-    if (!mysqli_select_db($conn, $database_name)) {
-        die("Database selection failed: " . mysqli_error($conn));
-    }
     $query = "SELECT * FROM new_users WHERE user_username='$newusername'";
     $result = $conn->query($query);
     if (!$result) {
@@ -14,5 +11,6 @@
     $conn->query($query);
     $query = "DELETE FROM new_users WHERE user_username = '$newusername'";
     $conn->query($query);
-    header('Location: admin_approval.php');
+    header('Location: admin/index.php#user-approve');
+    exit;
 ?>

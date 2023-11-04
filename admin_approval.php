@@ -3,7 +3,7 @@
     if (isset($_SESSION['user'])) {
         $user = $_SESSION['user'];
     } else {
-        $user = array();
+        die("Please <a href='login.php'>Login</a> First");
     }
     if($user[1] != "admin"){
         die("You don't have access to this page!");

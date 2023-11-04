@@ -5,10 +5,6 @@
         $username = $_POST['username'];
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $database_name = 'inventory';
-        if (!mysqli_select_db($conn, $database_name)) {
-            die("Database selection failed: " . mysqli_error($conn));
-        }
         $query = "INSERT INTO `new_users` VALUES ('$username', '$email', '$password', current_timestamp(), current_timestamp())";
         if($conn->query($query) == TRUE){
             $message = "Registered successfully!\nYour account will be created once admin approves you.";

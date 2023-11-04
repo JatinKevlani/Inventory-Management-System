@@ -5,10 +5,6 @@
         include('database/connection.php');
         $username = $_POST['username'];
         $password = $_POST['password'];
-        $database_name = 'inventory';
-        if (!mysqli_select_db($conn, $database_name)) {
-            die("Database selection failed: " . mysqli_error($conn));
-        }
         $query = "SELECT * FROM users WHERE user_username='$username' AND user_password='$password'";
         $result = $conn->query($query);
         if (!$result) {
@@ -17,7 +13,7 @@
         if ($result->num_rows > 0) {
             $user = $result->fetch_all()[0];
             $_SESSION['user'] = $user;
-            header('Location: dashboard.php');
+            header('Location: admin/index.php');
         } else {
             $query = "SELECT * FROM new_users WHERE user_username='$username' AND user_password='$password'";
             $result = $conn->query($query);
