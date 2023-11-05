@@ -1,6 +1,5 @@
 <?php
     $newusername = $_POST['approveusername'];
-    var_dump($newusername);
     include('database/connection.php');
     $query = "SELECT * FROM new_users WHERE user_username='$newusername'";
     $result = $conn->query($query);

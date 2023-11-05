@@ -235,6 +235,195 @@ $pending_users_count = $number_of_pending_users_fetched[0];
   </div>
   <!-- offcanvas -->
   <main class="mt-5 pt-3">
+    <!-- <div id="dashboard" class="page container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <h4 style="padding-top: 15px;">Dashboard</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 mb-3">
+          <div class="card bg-primary text-white h-100">
+            <div class="card-body">
+              <div class="d-flex flex-row justify-content-between align-items-center">
+                <p class="fs-4" style="padding-right: 25px;">Inventory Items</p>
+                <div class="flex-grow-1 justify-content-center align-items-center">
+                  <h1 class="display-2">42</h1>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer d-flex">
+              <a href="#invItem"></a>
+              View Details
+              <span class="ms-auto">
+                <i class="bi bi-chevron-right"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-3">
+          <div class="card bg-warning text-dark h-100">
+            <div class="card-body py-5">Turnover</div>
+            <div class="card-footer d-flex">
+              View Details
+              <span class="ms-auto">
+                <i class="bi bi-chevron-right"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <div class="card bg-success text-white h-100">
+            <div class="card-body py-5">Total employees</div>
+            <div class="card-footer d-flex">
+              View Details
+              <span class="ms-auto">
+                <i class="bi bi-chevron-right"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <div class="card bg-danger text-white h-100">
+            <div class="card-body py-5">User requests</div>
+            <div class="card-footer d-flex">
+              View Details
+              <span class="ms-auto">
+                <i class="bi bi-chevron-right"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 offset-md-2 mb-3">
+          <div class="card h-100">
+            <div class="card-header">
+              <span class="me-2"><i class="bi bi-bar-chart-fill"></i></span>
+              Sales in Last week
+            </div>
+            <div class="card-body">
+              <canvas class="chart" width="400" height="200"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 mb-3">
+          <div class="card">
+            <div class="card-header">
+              <span><i class="bi bi-plus"></i></span> Add new data
+            </div>
+            <div class="card-body">
+              <form action="#" method="post" class="container">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="position">Position:</label>
+                      <input type="text" id="position" name="position" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="office">Office:</label>
+                      <input type="text" id="office" name="office" class="form-control" required>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="age">Age:</label>
+                      <input type="number" id="age" name="age" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="startdate">Start Date:</label>
+                      <input type="date" id="startdate" name="startdate" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="salary">Salary:</label>
+                      <input type="number" id="salary" name="salary" class="form-control" required>
+                    </div>
+                  </div>
+                </div>
+                <input type="submit" value="Submit" class="btn btn-primary " style="margin-top: 15px;">
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-md-12 mb-3">
+          <div class="card">
+            <div class="card-header">
+              <span><i class="bi bi-table me-2"></i></span> data Table
+            </div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table id="example" class="table table-striped data-table" style="width: 100%">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Position</th>
+                      <th>Office</th>
+                      <th>Age</th>
+                      <th>Start date</th>
+                      <th>Salary</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Cedric Kelly</td>
+                      <td>Senior Javascript Developer</td>
+                      <td>Edinburgh</td>
+                      <td>22</td>
+                      <td>2012/03/29</td>
+                      <td>$433,060</td>
+                    </tr>
+                    <tr>
+                      <td>Airi Satou</td>
+                      <td>Accountant</td>
+                      <td>Tokyo</td>
+                      <td>33</td>
+                      <td>2008/11/28</td>
+                      <td>$162,700</td>
+                    </tr>
+                    <tr>
+                      <td>Brielle Williamson</td>
+                      <td>Integration Specialist</td>
+                      <td>New York</td>
+                      <td>61</td>
+                      <td>2012/12/02</td>
+                      <td>$372,000</td>
+                    </tr>
+                    <tr>
+                      <td>Herrod Chandler</td>
+                      <td>Sales Assistant</td>
+                      <td>San Francisco</td>
+                      <td>59</td>
+                      <td>2012/08/06</td>
+                      <td>$137,500</td>
+                    </tr>
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th>Name</th>
+                      <th>Position</th>
+                      <th>Office</th>
+                      <th>Age</th>
+                      <th>Start date</th>
+                      <th>Salary</th>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
     <div id="dashboard" class="page container-fluid">
       <div class="row">
         <div class="col-md-12">
@@ -250,9 +439,7 @@ $pending_users_count = $number_of_pending_users_fetched[0];
               <div class="d-flex flex-row justify-content-between align-items-center">
                 <p class="fs-4" style="padding-right: 25px;">Pending Supply request</p>
                 <!-- <div class="flex-grow-1 justify-content-center align-items-center"> -->
-                <h1 class="display-2">
-                  <?= $number_of_requests[0] ?>
-                </h1>
+                  <h1 class="display-2"><?= $number_of_requests[0] ?></h1>
                 <!-- </div> -->
               </div>
             </div>
@@ -269,13 +456,9 @@ $pending_users_count = $number_of_pending_users_fetched[0];
           <div class="card bg-success text-white h-100">
             <div class="card-body">
               <div class="d-flex flex-row justify-content-between align-items-center">
-                <p class="fs-4" style="padding-right: 25px;">Suppliers<br>
-                <pre style="overflow:hidden;">                </pre>
-                </p>
+                <p class="fs-4" style="padding-right: 25px;">Suppliers<br><pre style="overflow:hidden;">                </pre>   </p>
                 <!-- <div class="flex-grow-1 justify-content-center align-items-center"> -->
-                <h1 class="display-2">
-                  <?= $number_of_suppliers[0] ?>
-                </h1>
+                  <h1 class="display-2"><?= $number_of_suppliers[0] ?></h1>
                 <!-- </div> -->
               </div>
             </div>
@@ -294,9 +477,7 @@ $pending_users_count = $number_of_pending_users_fetched[0];
               <div class="d-flex flex-row justify-content-between align-items-center">
                 <p class="fs-4" style="padding-right: 25px;">Pending User Request</p>
                 <!-- <div class="flex-grow-1 justify-content-center align-items-center"> -->
-                <h1 class="display-2">
-                  <?= $pending_users_count[0] ?>
-                </h1>
+                  <h1 class="display-2"><?= $pending_users_count[0] ?></h1>
                 <!-- </div> -->
               </div>
             </div>
@@ -319,7 +500,7 @@ $pending_users_count = $number_of_pending_users_fetched[0];
               <div style="padding-top: 25px;" class="d-flex flex-row justify-content-between align-items-center">
                 <p class="fs-4" style="padding-right: 25px;">Inventory Items</p>
                 <!-- <div class="flex-grow-1 justify-content-center align-items-center"> -->
-                <h1 class="display-2">7</h1>
+                <h1 class="display-2">42</h1>
                 <!-- </div> -->
               </div>
             </div>
@@ -331,25 +512,25 @@ $pending_users_count = $number_of_pending_users_fetched[0];
         </div>
         <div class="col-md-6 mb-6">
           <div class="card border-0 bg-primary text-white h-100">
-            <div class="card-body d-flex flex-column">
-              <div class="bg-primary text-white">
-                <div class="d-flex justify-content-between">
-                  <p style="font-size: 20px;">Expandable Items</p>
-                  <p style="font-size: 20px;">2</p>
+            <div class="card-body d-flex flex-column" >
+                <div class="bg-primary text-white">
+                  <div class="d-flex justify-content-between">
+                    <p style="font-size: 20px;">Expandable Items</p>
+                    <p style="font-size: 20px;">69</p>
+                  </div>
                 </div>
-              </div>
-              <div class="bg-primary text-white">
-                <div class="d-flex justify-content-between">
-                  <p style="font-size: 20px;">Consumable Items</p>
-                  <p style="font-size: 20px;">1</p>
+                <div class="bg-primary text-white">
+                  <div class="d-flex justify-content-between">
+                    <p style="font-size: 20px;">Consumable Items</p>
+                    <p style="font-size: 20px;">69</p>
+                  </div>
                 </div>
-              </div>
-              <div class="bg-primary text-white">
-                <div class="d-flex justify-content-between">
-                  <p style="font-size: 20px;">Furniture Items</p>
-                  <p style="font-size: 20px;">4</p>
+                <div class="bg-primary text-white">
+                  <div class="d-flex justify-content-between">
+                    <p style="font-size: 20px;">Furniture Items</p>
+                    <p style="font-size: 20px;">69</p>
+                  </div>
                 </div>
-              </div>
             </div>
 
           </div>
@@ -422,8 +603,7 @@ $pending_users_count = $number_of_pending_users_fetched[0];
                     </div>
                   </div>
                 </div>
-                <button onclick="addProd()" value="Submit" class="btn btn-primary "
-                  style="margin-top: 15px;">Submit</button>
+                <button onclick="addProd()" value="Submit" class="btn btn-primary " style="margin-top: 15px;">Submit</button>
               </form>
             </div>
           </div>
@@ -650,7 +830,7 @@ $pending_users_count = $number_of_pending_users_fetched[0];
                   <tbody>
                     <?php foreach ($transaction_data as $val) { ?>
                       <?php
-                      $query = "SELECT (prod_type, prod_brand, prod_category, prod_name) FROM products WHERE prod_id = $val[2]";
+                      $query = "SELECT prod_type, prod_brand, prod_category, prod_name FROM products WHERE prod_id = $val[2]";
                       $result = $conn->query($query);
                       if (!$result) {
                         die("Query failed: " . mysqli_error($conn));
@@ -812,7 +992,6 @@ $pending_users_count = $number_of_pending_users_fetched[0];
                       <th>Product Name</th>
                       <th>Requested Quantity</th>
                       <th>Requested at</th>
-                      <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -845,38 +1024,10 @@ $pending_users_count = $number_of_pending_users_fetched[0];
                         <td>
                           <?= $value[5] ?>
                         </td>
-                        <td>
-                          <div class="d-flex flex-row">
-                            <?php
-                            $query = "SELECT prod_quantity FROM products WHERE prod_name = '$value[3]'";
-                            $result = $conn->query($query);
-                            if (!$result) {
-                              die("Query failed: " . mysqli_error($conn));
-                            }
-                            $prod_qty_js_fetched = $result->fetch_all();
-                            $prod_qty_js = $prod_qty_js_fetched[0];
-                            ?>
-                            <button class="btn btn-success"
-                              onclick="approve_qty('<?= $value[0] ?>', '<?= $value[4] ?>', '<?= $prod_qty_js[0] ?>')">
-                              <i class="bi bi-check-circle"></i> Approve
-                            </button>
-                            <button style="margin-left: 10px;" class="btn btn-danger"
-                              onclick="reject_qty('<?= $value[0] ?>')">
-                              <i class="bi bi-x-circle"></i> Reject
-                            </button>
-                          </div>
-                        </td>
                       </tr>
                     <?php } ?>
                   </tbody>
                 </table>
-                <div style="display: none;">
-                  <form action="prod_approve.php" method="post" id="approvereqform">
-                    <textarea name="reqid" id="reqid" cols="30" rows="10"></textarea>
-                    <textarea name="reqbool" id="reqbool" cols="30" rows="10">false</textarea>
-                    <textarea name="supqty" id="supqty" cols="30" rows="10"></textarea>
-                  </form>
-                </div>
               </div>
             </div>
           </div>
@@ -1043,36 +1194,6 @@ $pending_users_count = $number_of_pending_users_fetched[0];
       document.querySelector(".addingProd").submit();
       alert("Product added successfully!");
     }
-    function approve_qty(req_id, req_qty, avail_qty) {
-      console.log(req_id, req_qty);
-      let supp_qty = prompt("Enter the quantity you want to supply: ");
-      req_qty = parseInt(req_qty);
-      avail_qty = parseInt(avail_qty);
-      supp_qty = parseInt(supp_qty);
-      if (supp_qty > req_qty) {
-        alert('You can only supply up to ' + req_qty + ' units');
-      }
-      else if (supp_qty > avail_qty) {
-        alert("Not sufficient stock available!");
-      }
-      else if (supp_qty == req_qty) {
-        req_id = req_id.toString();
-        supp_qty = supp_qty.toString();
-        document.getElementById("reqid").value = req_id;
-        document.getElementById("supqty").value = supp_qty;
-        document.getElementById("reqbool").value = true;
-        document.querySelector("#approvereqform").submit();
-      }
-      else {
-        req_id = req_id.toString();
-        supp_qty = supp_qty.toString();
-        document.getElementById("reqid").value = req_id;
-        document.getElementById("supqty").value = supp_qty;
-        document.getElementById("reqbool").value = false;
-        document.querySelector("#approvereqform").submit();
-      }
-    }
-    // function reject_qty(req_id){}
   </script>
 </body>
 

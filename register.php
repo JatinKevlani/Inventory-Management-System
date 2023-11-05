@@ -12,6 +12,7 @@
         } else {
             echo "Error : " . $conn->error;
         }
+        header('Location: landing.php');
     }
 ?>
 <!DOCTYPE html>
